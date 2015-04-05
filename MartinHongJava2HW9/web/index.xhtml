@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Martin Hong HW 10</title>
+    </h:head>
+    <h:body>
+        <h2>Select a book</h2>
+        <h:form>
+            <h:selectOneRadio id="bookSelect" value="#{bookBean.selection}" >
+                <f:selectItem itemValue="Book1"  itemLabel="Book1"/>
+                <f:selectItem itemValue="Book2"  itemLabel="Book2"/>
+                <f:selectItem itemValue="Book3"  itemLabel="Book3"/>
+                <f:selectItem itemValue="Book4"  itemLabel="Book4"/>
+                <f:selectItem itemValue="Book5"  itemLabel="Book5"/>
+                <f:selectItem itemValue="Book6"  itemLabel="Book6"/>
+            </h:selectOneRadio>
+
+            <h:commandButton value="Add"/>
+        </h:form>
+        <p><h:outputLink value="shoppingcart.xhtml">Shopping Cart</h:outputLink></p>
+        <h:outputText escape="false" value="#{bookBean.response}"/>
+    </h:body>
+</html>
+

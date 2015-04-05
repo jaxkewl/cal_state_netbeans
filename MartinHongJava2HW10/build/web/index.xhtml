@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Martin Hong HW10</title>
+        <h:outputStylesheet name="style.css" library="css"/>
+    </h:head>
+    <h:body>
+        
+        <h2>Martin Hong's HW10 Guestbook</h2>
+
+      <h:form>
+         <p><h:commandButton value="Add Entry" action="addentry"/></p>
+      </h:form>        
+        
+        <h:dataTable value="#{messageBean.entries}" var="entries"
+                     rowClasses="oddRows,evenRows" headerClass="header"
+                     styleClass="table" cellpadding="5" cellspacing="0">
+
+            <h:column>
+                <f:facet name="header">Date</f:facet>
+                    #{entries.date}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                    #{entries.name}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                    #{entries.email}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Message</f:facet>
+                    #{entries.message}
+            </h:column>
+
+        </h:dataTable>
+    </h:body>
+</html>
+
